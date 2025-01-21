@@ -1067,7 +1067,35 @@ select.form-control:not([size]):not([multiple]){
 	color: #63c7bd;
 }
 
+/*------------------------------------------------------------------
+    QR code
+-------------------------------------------------------------------*/
 
+
+
+.get-photos-box {
+	background-color: #f8f9fa;
+	padding: 50px 0;
+}
+.qr-code-box img {
+	max-width: 200px;
+	margin: 20px auto;
+}
+.btn-common {
+	background-color: #6c757d;
+	color: #fff;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+.btn-common:hover {
+	background-color: #5a6268;
+	color: #fff;
+}
+.link-box {
+	margin-top: 20px;
+}
 
 
 
