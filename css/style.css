@@ -265,7 +265,7 @@ button:focus{
   }
 
   90% {
-    opacity: 0;
+    opacity: 0;flex-direction: ;
   }
 
   100% {
