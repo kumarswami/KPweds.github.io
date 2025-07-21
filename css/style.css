@@ -1105,6 +1105,12 @@ select.form-control:not([size]):not([multiple]){
 	}
 }
 
+/*------------------------------------------------------------------
+    Optional: hide the audio controls
+-------------------------------------------------------------------*/
+audio {
+    display: none;
+  }
 
 
 
