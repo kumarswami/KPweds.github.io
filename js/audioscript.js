@@ -1,14 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   const bgMusic = document.getElementById("bg-music");
+  let isPlaying = false;
 
-  function playMusicOnce() {
-    if (bgMusic) {
-      bgMusic.play().catch((error) => {
-        console.log("Autoplay failed:", error);
-      });
-      document.removeEventListener("click", playMusicOnce);
+  // Toggle play/pause on every page click
+  document.addEventListener("click", function () {
+    if (!bgMusic) return;
+
+    if (isPlaying) {
+      bgMusic.pause();
+    } else {
+      bgMusic.play().catch((err) => console.log("Play failed:", err));
     }
-  }
 
-  document.addEventListener("click", playMusicOnce);
+    isPlaying = !isPlaying;
+  });
 });
