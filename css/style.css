@@ -499,22 +499,22 @@ button:focus{
 }
 
 
-.countdown #timer div#days{
+.countdown #timer div#days {
 	position: absolute;
 	left: 0;
 	top: 90px;
 }
-.countdown #timer div#hours{
+.countdown #timer div#hours {
 	position: absolute;
-	left: 15%;
+	left: 0;
 	top: 90px;
 }
-.countdown #timer div#minutes{
+.countdown #timer div#minutes {
 	position: absolute;
 	bottom: 0px;
 	left: 15%;
 }
-.countdown #timer div#seconds{
+.countdown #timer div#seconds {
 	position: absolute;
 	bottom: 0px;
 	right: 15%;
