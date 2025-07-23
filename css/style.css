@@ -519,18 +519,6 @@ button:focus{
 	bottom: 0px;
 }
 
-.countdown #timer .marriage-heading {
-  font-family: 'Engagement', cursive;
-  font-size: 32px;
-  color: #890025; /* Maroon */
-  background-color: #f8f3eb; /* Light cream */
-  text-align: center;
-  margin: 0 auto 10px auto;
-  padding: 14px 25px;
-  border-radius: 15px 15px 0 0;
-  box-shadow: 0 4px 8px rgba(137, 0, 37, 0.1);
-  display: inline-block;
-}
 /*------------------------------------------------------------------
     About
 -------------------------------------------------------------------*/
