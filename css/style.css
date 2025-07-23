@@ -506,7 +506,7 @@ button:focus{
 }
 .countdown #timer div#hours{
 	position: absolute;
-	right: 0;
+	left: 15%;
 	top: 90px;
 }
 .countdown #timer div#minutes{
