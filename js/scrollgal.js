@@ -1,4 +1,4 @@
-// Get the gallery container
+// Get the gallery container (scrollable div)
 const gallery = document.getElementById('gallery');
 
 // Configuration
@@ -13,7 +13,7 @@ function scrollGallery(direction) {
 
   currentIndex += direction;
 
-  // Loop the scroll if end is reached
+  // Looping logic
   if (currentIndex < 0) currentIndex = 0;
   if (currentIndex > Math.floor(imageCount / imagesPerView) - 1) {
     currentIndex = 0;
@@ -25,21 +25,21 @@ function scrollGallery(direction) {
   });
 }
 
-// Function to start auto-scrolling
+// Auto-scroll function
 function startAutoScroll() {
   autoScrollInterval = setInterval(() => {
     scrollGallery(1);
   }, 5000);
 }
 
-// Function to stop auto-scrolling (optional: for hover pause)
+// Stop auto-scroll
 function stopAutoScroll() {
   clearInterval(autoScrollInterval);
 }
 
-// Optional: Pause auto-scroll on hover
+// Optional: pause on hover
 gallery.addEventListener('mouseenter', stopAutoScroll);
 gallery.addEventListener('mouseleave', startAutoScroll);
 
-// Initialize auto-scroll on load
-startAutoScroll();
+// Start on load
+window.addEventListener('DOMContentLoaded', startAutoScroll);
