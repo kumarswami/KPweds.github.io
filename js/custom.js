@@ -112,31 +112,26 @@
 	/* ..............................................
     Countdown Clock
 	................................................. */
-	const countDownDate = new Date("Dec 27, 2025 00:00:00").getTime();
+	function makeTimer() {
+	const endTime = new Date("27 December 2025 23:59:59 GMT+0900");
+	const now = new Date();
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
+	const timeLeft = Math.floor((endTime - now) / 1000);
 
-      if (distance < 0) {
-        document.querySelector(".countdown").innerHTML = "<h3>The Big Day is Here!</h3>";
-        clearInterval(interval);
-        return;
-      }
+	const days = Math.floor(timeLeft / 86400);
+	const hours = Math.floor((timeLeft % 86400) / 3600);
+	const minutes = Math.floor((timeLeft % 3600) / 60);
+	const seconds = Math.floor(timeLeft % 60);
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	const format = (num) => (num < 10 ? "0" + num : num);
 
-      document.getElementById("days").textContent = String(days).padStart(2, '0');
-      document.getElementById("hours").textContent = String(hours).padStart(2, '0');
-      document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
-      document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
-    }
+	$("#days").html(format(days) + "<h6>Days</h6>");
+	$("#hours").html(format(hours) + "<h6>Hrs</h6>");
+	$("#minutes").html(format(minutes) + "<h6>Min</h6>");
+	$("#seconds").html(format(seconds) + "<h6>Sec</h6>");
+	}
 
-    const interval = setInterval(updateCountdown, 1000);
-    updateCountdown();
+	setInterval(makeTimer, 1000);
 
 
 	
