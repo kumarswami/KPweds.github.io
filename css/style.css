@@ -455,6 +455,129 @@ button:focus{
 	background: #881228;
 }
 
+.countdown{
+	background: url(../images/ptn-bg.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	max-width: 550px;
+	height: 350px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 5;
+	border-radius: 20px 20px 20px 20px;
+}
+.countdown #timer div{
+	display: inline-block;
+	background: #d69b7f;
+	width: 20%;
+	color: #ffffff;
+	font-size: 38px;
+	box-shadow: inset 0 0 0 10px rgba(82,135,128,0.9), 0 1px 2px rgba(82,135,128,0.1);
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+.countdown #timer h3{
+	font-family: 'Engagement', cursive;
+	font-size: 38px;
+	color: #ffffff;
+	font-weight: normal;
+	padding: 0px;
+	padding-top: 28px;
+	padding-bottom: 17px;
+	background: #890025;
+}
+
+.countdown #timer div h6{
+	color: #890025;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+
+.countdown #timer div#days{
+	position: absolute;
+	left: 0;
+	top: 90px;
+}
+.countdown #timer div#hours{
+	position: absolute;
+	right: 0;
+	top: 90px;
+}
+.countdown #timer div#minutes{
+	position: absolute;
+	bottom: 0px;
+	left: 15%;
+}
+.countdown #timer div#seconds{
+	position: absolute;
+	bottom: 0px;
+}
+
+.countdown {
+      text-align: center;
+    }
+
+    .countdown-date {
+      background-color: #800000; /* Maroon */
+      color: #f9f5f0; /* Light cream text */
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 28px;
+      display: inline-block;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 15px rgba(128,0,0,0.3);
+    }
+
+    .time-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .time-box {
+      background: #f9f5f0; /* Light cream */
+      color: #800000; /* Maroon */
+      border: 2px solid #800000;
+      padding: 18px 24px;
+      border-radius: 12px;
+      width: 90px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .time-box:hover {
+      background: #f0e9e0;
+      box-shadow: 0 6px 16px rgba(128,0,0,0.25);
+    }
+
+    .time-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .time-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+/*------------------------------------------------------------------
+    About
+-------------------------------------------------------------------*/
+
+.tooltip-1 {
 	display: inline-block;
 	position: relative;
 	color: #890025;
@@ -526,144 +649,6 @@ button:focus{
 }
 
 .about-m ul{
-.countdown{
-	background: url(../images/ptn-bg.jpg);
-	background-size: cover;
-	width: 100%;
-	height: 100%;
-	max-width: 550px;
-	height: 350px;
-	margin: 0 auto;
-	position: relative;
-	z-index: 5;
-	border-radius: 20px 20px 20px 20px;
-}
-.countdown #timer div{
-	display: inline-block;
-	background: #d69b7f;
-	width: 20%;
-	color: #ffffff;
-	font-size: 38px;
-	box-shadow: inset 0 0 0 10px rgba(82,135,128,0.9), 0 1px 2px rgba(82,135,128,0.1);
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-ms-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
-}
-
-.countdown #timer h3{
-	font-family: 'Engagement', cursive;
-	font-size: 38px;
-	color: #ffffff;
-	font-weight: normal;
-	padding: 0px;
-	padding-top: 28px;
-	padding-bottom: 17px;
-	background: #890025;
-}
-
-.countdown #timer div h6{
-	color: #890025;
-	font-weight: 600;
-	font-size: 16px;
-}
-
-
-.countdown #timer div#days{
-	position: absolute;
-	left: 0;
-	top: 90px;
-}
-.countdown #timer div#hours{
-	position: absolute;
-	right: 0;
-	top: 90px;
-}
-.countdown #timer div#minutes{
-	position: absolute;
-	bottom: 0px;
-	left: 15%;
-}
-.countdown #timer div#seconds{
-	position: absolute;
-	bottom: 0px;
-}
-
-
-
-
-
-body {
-      background: #f9f5f0; /* Light cream */
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .countdown {
-      text-align: center;
-    }
-
-    .countdown-date {
-      background-color: #800000; /* Maroon */
-      color: #f9f5f0; /* Light cream text */
-      padding: 16px 32px;
-      border-radius: 10px;
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin-bottom: 28px;
-      display: inline-block;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-      box-shadow: 0 6px 15px rgba(128,0,0,0.3);
-    }
-
-    .time-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .time-box {
-      background: #f9f5f0; /* Light cream */
-      color: #800000; /* Maroon */
-      border: 2px solid #800000;
-      padding: 18px 24px;
-      border-radius: 12px;
-      width: 90px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-    }
-
-    .time-box:hover {
-      background: #f0e9e0;
-      box-shadow: 0 6px 16px rgba(128,0,0,0.25);
-    }
-
-    .time-number {
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-      font-family: 'Courier New', Courier, monospace;
-    }
-
-    .time-label {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-
-/*------------------------------------------------------------------
-    About
--------------------------------------------------------------------*/
-
-.tooltip-1 {
 	display: block;
 	text-align: center;
 	padding-bottom: 30px;
