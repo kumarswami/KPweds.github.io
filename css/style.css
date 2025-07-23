@@ -1113,59 +1113,38 @@ audio {
   }
 
 
-/*------------------------------------------------------------------
-    Scrolling Gallery: CSS 
--------------------------------------------------------------------*/
-.gallery-wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
 
-.scroll-gallery {
-  overflow: hidden;
-}
 
-.scroll-gallery ul {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  width: calc(16 * 150px); /* 16 images * image width */
-}
 
-.scroll-gallery li {
-  flex: 0 0 12.5%; /* 100% / 8 images = 12.5% */
-  padding: 5px;
-}
 
-.scroll-gallery img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
 
-.scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #fff;
-  border: none;
-  font-size: 24px;
-  padding: 8px 12px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-}
 
-.scroll-btn.left {
-  left: 0;
-}
 
-.scroll-btn.right {
-  right: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
