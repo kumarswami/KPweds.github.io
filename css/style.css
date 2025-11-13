@@ -1025,67 +1025,93 @@ audio {
 
 
 /*------------new couple section ---------*/
+
+/* ===== Couple Section ===== */
+#fh5co-couple {
+  background-color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.fh5co-heading h2 {
+  font-family: "Sacramento", cursive;
+  font-size: 40px;
+  color: #a52a2a; /* maroon accent */
+  margin-bottom: 10px;
+}
+
+.fh5co-heading h3 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.fh5co-heading p {
+  font-size: 16px;
+  color: #999;
+}
+
 /* ===== Couple Wrapper ===== */
 .couple-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  position: relative;
+  gap: 60px;
+  flex-wrap: wrap;
   margin-top: 40px;
 }
 
-/* ===== Couple Half Sections ===== */
+/* ===== Groom & Bride Section ===== */
 .couple-half {
-  flex: 1 1 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex: 1 1 45%;
   text-align: center;
-}
-
-/* Groom text left, bride text right on desktop */
-.groom-half .desc-groom {
-  text-align: left;
-  align-self: flex-start;
-}
-
-.bride-half .desc-bride {
-  text-align: right;
-  align-self: flex-end;
+  max-width: 400px;
 }
 
 /* ===== Images ===== */
 .couple-half img {
-  width: 220px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 220px;
   border-radius: 50%;
+  object-fit: cover;
   border: 5px solid #f8f0e3;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  object-fit: cover;
   transition: transform 0.3s ease;
-  margin: 10px 0;
 }
 
 .couple-half img:hover {
   transform: scale(1.05);
 }
 
-/* ===== Heart in center ===== */
-.heart-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+/* ===== Text Styling ===== */
+.desc-groom h3,
+.desc-bride h3 {
+  font-size: 24px;
+  color: #a52a2a;
+  margin-top: 15px;
+  font-weight: 600;
 }
 
-.heart-center .heart {
-  font-size: 64px;
+.desc-groom p,
+.desc-bride p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* ===== Heart Icon ===== */
+.heart {
+  font-size: 48px;
   color: #a52a2a;
+  margin: 20px 0;
+}
+
+.heart i {
   animation: pulse 1.2s infinite;
 }
 
-/* ===== Pulse Animation ===== */
+/* ===== Animation ===== */
 @keyframes pulse {
   0% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.2); opacity: 0.7; }
@@ -1096,27 +1122,30 @@ audio {
 @media (max-width: 768px) {
   .couple-wrap {
     flex-direction: column;
-    gap: 20px;
-    position: static;
+    gap: 30px;
   }
 
-  .heart-center {
-    position: static;
-    transform: none;
-    margin: 15px 0;
-  }
-
-  .groom-half .desc-groom,
-  .bride-half .desc-bride {
-    text-align: center;
-    align-self: center;
+  .couple-half {
+    max-width: 90%;
   }
 
   .couple-half img {
-    width: 180px;
+    max-width: 180px;
   }
 
-  .heart-center .heart {
-    font-size: 48px;
+  .heart {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+
+  .desc-groom h3,
+  .desc-bride h3 {
+    font-size: 20px;
+  }
+
+  .desc-groom p,
+  .desc-bride p {
+    font-size: 14px;
   }
 }
+
