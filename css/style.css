@@ -700,8 +700,6 @@ button:focus{
 .gallery-box{
 	padding: 70px 0px;
 }
-
-.gallery-box ul{}
 .gallery-box ul li{
 	position: relative;
 	width: 25%;
@@ -891,7 +889,6 @@ button:focus{
 .contact-box{
 	padding: 70px 0px;
 }
-.contact-block{}
 
 .contact-block .form-group .form-control{
 	background: #890025;
