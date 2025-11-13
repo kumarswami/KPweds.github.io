@@ -113,25 +113,27 @@
     Countdown Clock
 	................................................. */
 	function makeTimer() {
-	const endTime = new Date("27 December 2025 23:59:59 GMT+0900");
-	const now = new Date();
+    const endTime = new Date("27 December 2026 23:59:59 GMT+0900");
+    const now = new Date();
 
-	const timeLeft = Math.floor((endTime - now) / 1000);
+    const timeLeft = Math.floor((endTime - now) / 1000);
 
-	const days = Math.floor(timeLeft / 86400);
-	const hours = Math.floor((timeLeft % 86400) / 3600);
-	const minutes = Math.floor((timeLeft % 3600) / 60);
-	const seconds = Math.floor(timeLeft % 60);
+    const days = Math.floor(timeLeft / 86400);
+    const hours = Math.floor((timeLeft % 86400) / 3600);
+    const minutes = Math.floor((timeLeft % 3600) / 60);
+    const seconds = Math.floor(timeLeft % 60);
 
-	const format = (num) => (num < 10 ? "0" + num : num);
+    const format = (num) => (num < 10 ? "0" + num : num);
 
-	$("#days").html(format(days) + "<h6>Days</h6>");
-	$("#hours").html(format(hours) + "<h6>Hrs</h6>");
-	$("#minutes").html(format(minutes) + "<h6>Min</h6>");
-	$("#seconds").html(format(seconds) + "<h6>Sec</h6>");
+    $("#days .time-number").text(format(days));
+    $("#hours .time-number").text(format(hours));
+    $("#minutes .time-number").text(format(minutes));
+    $("#seconds .time-number").text(format(seconds));
 	}
 
 	setInterval(makeTimer, 1000);
+	makeTimer(); // initial call
+
 
 
 	
