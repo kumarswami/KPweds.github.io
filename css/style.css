@@ -375,8 +375,9 @@ button:focus{
 -------------------------------------------------------------------*/
 .countdown {
     text-align: center;
-    background: url(../images/ptn-bg.jpg);
+    /* background: url(../images/ptn-bg.jpg); */
     background-size: cover;
+	background-color: transparent; /* optional, or set a solid color if needed */
     max-width: 550px;
     margin: 0 auto;
     border-radius: 20px;
