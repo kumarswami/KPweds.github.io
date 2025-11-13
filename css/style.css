@@ -375,22 +375,21 @@ button:focus{
 -------------------------------------------------------------------*/
 .countdown {
     text-align: center;
-    max-width: 550px;
+    max-width: 600px;
     margin: 0 auto;
-    border-radius: 20px;
-    padding: 20px 0;
-    background-color: transparent;
+    padding: 20px 10px;
     box-sizing: border-box;
 }
 
 #timer {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap; /* allows boxes to wrap on small screens */
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap; /* Keep all boxes in one row */
 }
 
 .time-box {
+    flex: 1 1 0; /* allow proportional shrinking */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -398,48 +397,41 @@ button:focus{
     background: #f9f5f0; /* light cream */
     color: #800000; /* maroon */
     border: 2px solid #800000;
-    padding: 15px 20px;
+    padding: 15px;
     border-radius: 12px;
-    width: 70px; /* smaller base width */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    font-family: 'Courier New', monospace;
+    min-width: 60px; /* prevent boxes from getting too small */
     box-sizing: border-box;
-    word-wrap: break-word; /* prevents overflow */
-    flex-shrink: 0;
 }
 
 .time-number {
-    font-size: 2rem; /* base size */
+    font-size: 2rem;
     font-weight: 800;
-    margin-bottom: 5px;
     line-height: 1.1;
+    margin-bottom: 5px;
+    word-wrap: break-word;
 }
 
 .time-label {
-    font-size: 0.7rem; /* base size */
+    font-size: 0.85rem;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
     text-align: center;
 }
 
-/* Responsive adjustments for mobile */
-
+/* Mobile tweaks */
 @media (max-width: 480px) {
-    #timer {
-        gap: 10px;
-    }
-    .time-box {
-        width: 55px;
-        padding: 10px 12px;
-    }
     .time-number {
-        font-size: 1.6rem;
+        font-size: 1.6rem; /* smaller number */
     }
     .time-label {
-        font-size: 0.65rem;
+        font-size: 0.7rem; /* smaller label */
+    }
+    #timer {
+        gap: 5px;
     }
 }
+
 /*------------------------------------------------------------------
     About
 -------------------------------------------------------------------*/
