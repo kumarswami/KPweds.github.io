@@ -426,19 +426,20 @@ button:focus{
 /* Responsive adjustments for mobile */
 
 @media (max-width: 480px) {
+    #timer {
+        gap: 10px;
+    }
     .time-box {
-        width: 55px; /* smaller box */
+        width: 55px;
         padding: 10px 12px;
     }
     .time-number {
-        font-size: 1.6rem; /* smaller number */
+        font-size: 1.6rem;
     }
     .time-label {
-        font-size: 0.65rem; /* smaller label */
+        font-size: 0.65rem;
     }
 }
-
-
 /*------------------------------------------------------------------
     About
 -------------------------------------------------------------------*/
