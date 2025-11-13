@@ -1025,12 +1025,12 @@ audio {
 
 
 /*------------new couple section ---------*/
-/* ===== Basic Layout ===== */
+
+/* ===== Couple Section ===== */
 #fh5co-couple {
-  padding: 50px 20px;
-  text-align: center;
   background-color: #fff;
-  color: #333;
+  padding: 80px 0;
+  text-align: center;
 }
 
 .fh5co-heading h2 {
@@ -1051,20 +1051,21 @@ audio {
   color: #999;
 }
 
-/* ===== Couple Section ===== */
+/* ===== Couple Wrapper ===== */
 .couple-wrap {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 60px;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
+/* ===== Groom & Bride Section ===== */
 .couple-half {
-  width: 250px;
-  max-width: 90%;
+  flex: 1 1 45%;
   text-align: center;
+  max-width: 400px;
 }
 
 /* ===== Images ===== */
@@ -1073,19 +1074,19 @@ audio {
   max-width: 220px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #f8f0e3; /* light cream border */
+  border: 5px solid #f8f0e3;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 .couple-half img:hover {
   transform: scale(1.05);
 }
 
-/* ===== Text ===== */
+/* ===== Text Styling ===== */
 .desc-groom h3,
 .desc-bride h3 {
-  font-size: 20px;
+  font-size: 24px;
   color: #a52a2a;
   margin-top: 15px;
   font-weight: 600;
@@ -1093,16 +1094,20 @@ audio {
 
 .desc-groom p,
 .desc-bride p {
-  font-size: 14px;
+  font-size: 15px;
   color: #555;
   line-height: 1.6;
   margin-top: 10px;
 }
 
 /* ===== Heart Icon ===== */
-.heart i {
+.heart {
+  font-size: 48px;
   color: #a52a2a;
-  font-size: 36px;
+  margin: 20px 0;
+}
+
+.heart i {
   animation: pulse 1.2s infinite;
 }
 
@@ -1113,31 +1118,34 @@ audio {
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* ===== Fade In Animation for Content ===== */
-.animate-box {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===== Responsive Design ===== */
+/* ===== Responsive Layout ===== */
 @media (max-width: 768px) {
   .couple-wrap {
     flex-direction: column;
+    gap: 30px;
+  }
+
+  .couple-half {
+    max-width: 90%;
   }
 
   .couple-half img {
     max-width: 180px;
   }
 
-  .fh5co-heading h2 {
-    font-size: 32px;
+  .heart {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+
+  .desc-groom h3,
+  .desc-bride h3 {
+    font-size: 20px;
+  }
+
+  .desc-groom p,
+  .desc-bride p {
+    font-size: 14px;
   }
 }
+

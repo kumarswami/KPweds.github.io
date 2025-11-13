@@ -1,0 +1,116 @@
+/* ===== Basic Layout ===== */
+#fh5co-couple {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+}
+
+.fh5co-heading h2 {
+  font-family: "Sacramento", cursive;
+  font-size: 40px;
+  color: #a52a2a; /* maroon accent */
+  margin-bottom: 10px;
+}
+
+.fh5co-heading h3 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.fh5co-heading p {
+  font-size: 16px;
+  color: #999;
+}
+
+/* ===== Couple Section ===== */
+.couple-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.couple-half {
+  width: 250px;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* ===== Images ===== */
+.couple-half img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #f8f0e3; /* light cream border */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+
+.couple-half img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Text ===== */
+.desc-groom h3,
+.desc-bride h3 {
+  font-size: 20px;
+  color: #a52a2a;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.desc-groom p,
+.desc-bride p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* ===== Heart Icon ===== */
+.heart i {
+  color: #a52a2a;
+  font-size: 36px;
+  animation: pulse 1.2s infinite;
+}
+
+/* ===== Animation ===== */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ===== Fade In Animation for Content ===== */
+.animate-box {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .couple-wrap {
+    flex-direction: column;
+  }
+
+  .couple-half img {
+    max-width: 180px;
+  }
+
+  .fh5co-heading h2 {
+    font-size: 32px;
+  }
+}
