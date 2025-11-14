@@ -389,17 +389,17 @@ button:focus{
 }
 
 .time-box {
-    flex: 1 1 0; /* allow proportional shrinking */
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #f9f5f0; /* light cream */
-    color: #800000; /* maroon */
+    background: #f9f5f0;
+    color: #800000;
     border: 2px solid #800000;
     padding: 15px;
     border-radius: 12px;
-    min-width: 60px; /* prevent boxes from getting too small */
+    min-width: 60px;
     box-sizing: border-box;
 }
 
@@ -408,7 +408,6 @@ button:focus{
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 5px;
-    word-wrap: break-word;
 }
 
 .time-label {
@@ -422,37 +421,38 @@ button:focus{
 /* ===== FIX COUNTER OVERLAP ON MOBILE ===== */
 @media (max-width: 768px) {
 
-  /* Make all boxes shrink proportionally */
-  #timer {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* allows horizontal scroll if very small screen */
-    padding-bottom: 10px;
-  }
+    #timer {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: nowrap;       /* keep in one row */
+        overflow-x: auto;        /* enable scroll if screen tiny */
+        padding-bottom: 10px;
+    }
 
-  #timer div {
-    width: 70px;          /* shrink box */
-    min-width: 70px;      /* prevent breaking */
-    padding: 10px 5px;
-  }
+    .time-box {
+        min-width: 65px;         /* fixed mobile width */
+        max-width: 65px;
+        padding: 10px 5px;
+        border-radius: 10px;
+    }
 
-  #timer div h6 {
-    font-size: 10px;      /* reduce label size */
-    margin-top: 4px;
-  }
+    .time-number {
+        font-size: 1.4rem;       /* reduce number size */
+        line-height: 1.1;
+        margin-bottom: 4px;
+    }
 
-  #timer div span, #timer div {
-    font-size: 22px;      /* reduce number size */
-    line-height: 1.2;
-  }
+    .time-label {
+        font-size: 0.7rem;       /* smaller label */
+        letter-spacing: 0.5px;
+    }
 
-  /* Prevent box overflow into next section */
-  .countdown {
-    margin-bottom: 30px;
-  }
+    .countdown {
+        margin-bottom: 20px;     /* prevents overlap */
+    }
 }
+
 
 
 /*------------------------------------------------------------------
