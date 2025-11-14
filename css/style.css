@@ -419,18 +419,41 @@ button:focus{
     text-align: center;
 }
 
-/* Mobile tweaks */
-@media (max-width: 480px) {
-    .time-number {
-        font-size: 1.6rem; /* smaller number */
-    }
-    .time-label {
-        font-size: 0.7rem; /* smaller label */
-    }
-    #timer {
-        gap: 5px;
-    }
+/* ===== FIX COUNTER OVERLAP ON MOBILE ===== */
+@media (max-width: 768px) {
+
+  /* Make all boxes shrink proportionally */
+  #timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* allows horizontal scroll if very small screen */
+    padding-bottom: 10px;
+  }
+
+  #timer div {
+    width: 70px;          /* shrink box */
+    min-width: 70px;      /* prevent breaking */
+    padding: 10px 5px;
+  }
+
+  #timer div h6 {
+    font-size: 10px;      /* reduce label size */
+    margin-top: 4px;
+  }
+
+  #timer div span, #timer div {
+    font-size: 22px;      /* reduce number size */
+    line-height: 1.2;
+  }
+
+  /* Prevent box overflow into next section */
+  .countdown {
+    margin-bottom: 30px;
+  }
 }
+
 
 /*------------------------------------------------------------------
     About
