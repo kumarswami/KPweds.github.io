@@ -1025,7 +1025,6 @@ audio {
 
 
 /*------------new couple section ---------*/
-
 /* ===== Couple Section ===== */
 #fh5co-couple {
   background-color: #fff;
@@ -1033,22 +1032,23 @@ audio {
   text-align: center;
 }
 
+/* ===== Heading Styling ===== */
 .fh5co-heading h2 {
   font-family: "Sacramento", cursive;
-  font-size: 40px;
-  color: #a52a2a; /* maroon accent */
+  font-size: 48px;
+  color: #ff4f87; 
   margin-bottom: 10px;
 }
 
 .fh5co-heading h3 {
-  font-size: 18px;
-  color: #666;
+  font-size: 22px;
+  color: #333;
   margin-bottom: 10px;
 }
 
 .fh5co-heading p {
-  font-size: 16px;
-  color: #999;
+  font-size: 18px;
+  color: #777;
 }
 
 /* ===== Couple Wrapper ===== */
@@ -1056,96 +1056,99 @@ audio {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  margin-top: 40px;
+  gap: 40px;
+  margin-top: 50px;
 }
 
-/* ===== Groom & Bride Section ===== */
+/* Groom and Bride Sections */
 .couple-half {
-  flex: 1 1 45%;
-  text-align: center;
+  width: 35%;
   max-width: 400px;
 }
 
-/* ===== Images ===== */
-.couple-half img {
-  width: 100%;
-  max-width: 220px;
+.couple-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Circle Images */
+.couple-img img {
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #f8f0e3;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+  border: 6px solid #fce4ec;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.couple-half img:hover {
-  transform: scale(1.05);
+/* Groom text left / Bride text right */
+.desc-groom {
+  text-align: left;
+  margin-top: 20px;
 }
 
-/* ===== Text Styling ===== */
+.desc-bride {
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* Names */
 .desc-groom h3,
 .desc-bride h3 {
-  font-size: 24px;
-  color: #a52a2a;
-  margin-top: 15px;
-  font-weight: 600;
+  font-family: "Sacramento", cursive;
+  font-size: 36px;
+  color: #ff4f87;
+  margin-bottom: 10px;
 }
 
+/* Description paragraph */
 .desc-groom p,
 .desc-bride p {
-  font-size: 15px;
   color: #555;
+  font-size: 16px;
   line-height: 1.6;
-  margin-top: 10px;
+  max-width: 350px;
 }
 
-/* ===== Heart Icon ===== */
-.heart {
-  font-size: 48px;
-  color: #a52a2a;
-  margin: 20px 0;
+/* ===== Heart Icon in Middle ===== */
+.middle-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.heart i {
-  animation: pulse 1.2s infinite;
+.middle-heart i {
+  font-size: 32px;
+  color: #ff4f87;
+  margin: 0 10px;
 }
 
-/* ===== Animation ===== */
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-/* ===== Responsive Layout ===== */
+/* ========= MOBILE RESPONSIVE ========= */
 @media (max-width: 768px) {
+
   .couple-wrap {
     flex-direction: column;
     gap: 30px;
   }
 
   .couple-half {
-    max-width: 90%;
+    width: 100%;
+    text-align: center !important;
   }
 
-  .couple-half img {
-    max-width: 180px;
+  .desc-groom,
+  .desc-bride {
+    text-align: center;
   }
 
-  .heart {
-    font-size: 36px;
-    margin: 10px 0;
+  /* Hide heart on mobile */
+  .middle-heart {
+    display: none;
   }
 
-  .desc-groom h3,
-  .desc-bride h3 {
-    font-size: 20px;
-  }
-
-  .desc-groom p,
-  .desc-bride p {
-    font-size: 14px;
+  .couple-img img {
+    width: 150px;
+    height: 150px;
   }
 }
-
